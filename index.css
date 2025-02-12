@@ -45,6 +45,12 @@ body{
 #mob-l-logo{
     display: none;
 }
+.laptop-left-container{
+    display: none;
+}
+.laptop-right-container{
+    display: none;
+}
 .nav-left-container{
     width: 100%;
     display: block;
@@ -109,7 +115,7 @@ body{
     width: 24px;
     margin-top: 4px;
 }
-/* _____Conten_____ */
+/* _____Content_____ */
 
 .main-wrap-content{
     display: block;
@@ -337,9 +343,11 @@ body{
 }
 @media screen and (min-width:1024px) {
     .nav-container{
+        width: 100%;
         gap: 0;
         height: 64px;
         padding: 8px;
+        box-sizing: border-box;
     }
     #mob-l-logo{
         height: 72px;
@@ -352,6 +360,9 @@ body{
     }
     .nav-right-container{
         display: none;
+    }
+    .laptop-left-container{
+        display: block;
     }
     .home-input-container{
         width: 100%;
@@ -383,9 +394,156 @@ body{
         display: flex;
     }
     .laptop-right-container{
-        width: 100%;
+        width: fit-content;
         display: flex;
-        
+        align-items: center;
+        justify-content: right;
+        gap: 8px;
     }
+
+    .nav-lists{
+        display: block;
+        color: #B3B3B3;
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 700;
+        border: none;
+        background-color: #000;
+    }
+    .side-divider{
+        /* top: 10px; */
+        height: 25px;
+        width: 1px;
+        display: block;
+        margin: 16px;
+        background-color: #fff;
+    }
+    .install-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 16px 4px 12px;
+    }
+    .install-icon svg{
+        width: 16px;
+        height: 16px;
+        display: block;
+        fill: #B3B3B3;
+        margin-right: 5px;
+    }
+    .install-text{
+        display: block;
+        color: #B3B3B3;
+        font-size: 0.875rem;
+        font-weight: 700;
+        text-wrap: nowrap;
+    }
+    .login-container{
+        display: flex;
+    }
+    .signup-button{
+        height: 48px;
+        display: block;
+        background-color: #000;
+        border: none;
+        color: #B3B3B3;
+        text-wrap: nowrap;
+        font-family: 'SpotifyMixUIBold';
+        font-size: 0.875rem;
+        font-weight: 700;
+        padding: 4px 16px 4px 8px;
+    }
+    /* .signup-button span{
+    } */
+    .login-button{
+        background-color: #fff;
+        border: none;
+        border-radius: 9999px;
+        box-sizing: border-box;
+    }
+    .login-button span{
+        height: 48px;
+        display: flex;
+        padding: 8px 32px;
+        align-items: center;
+        justify-content: center;
+        font-family: 'SpotifyMixUIBold';
+        font-size: 1rem;
+        font-weight: 700;
+        text-wrap: nowrap;
+        line-height: normal;
+        letter-spacing: normal;
+        box-sizing: border-box;
+    }
+    /* _____Content_____ */
+    .main-wrap{
+        width: 100%;
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+    }
+    .main-wrap-content{
+        display: flex;
+        flex-flow: row;
+        gap: 8px;
+        padding: 8px;
+        box-sizing: border-box;
+        background-color: #000;
+    }
+    .left-sidebar-container{
+        width: 280px;
+        /* width: 27%; */
+        background-color: #121212;
+    }
+    .main-content-container{
+        width: 70%;
+        display: block;
+        box-sizing: border-box;
+        background-color: #121212;
+    }
+    .library-content{
+        display: flex;
+        padding: 12px 16px 8px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .library-text-icon-container{
+        height: 32px;
+        display: flex;
+        padding: 4px 8px;
+        color: #B3B3B3;
+        align-items: center;
+    }
+    .library-icon{
+        width: 24px;
+        height: 24px;
+        display: block;
+        margin-right: 12px;
+    }
+    .library-icon svg{
+        fill: #B3B3B3;
+    }
+    .plus-icon{
+        height: fit-content;
+        display: block;
+        padding: 8px;
+        margin-top: -2px;
+    }
+    .plus-icon span{
+        height: 16px;
+        display: block;
+    }
+    .plus-icon svg{
+        height: 16px;
+        width: 16px;
+        fill: #B3B3B3;
+    }
+    .sidebar-content-container{
+        gap: 8px;
+        display: flex;
+        flex-flow: column;
+        padding: 0px 8px 8px;
+    }
+
 
 }
