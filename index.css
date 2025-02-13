@@ -117,6 +117,9 @@ body{
 }
 /* _____Content_____ */
 
+.left-sidebar-container{
+    display: none;
+}
 .main-wrap-content{
     display: block;
     margin-top: 56px;
@@ -253,6 +256,7 @@ body{
     border-block-start: 1px solid #292929;
     margin: 0 0 20px 0;
 }
+
 /* ____footer-End____ */
 
 .footer-bottom-container{
@@ -296,7 +300,7 @@ body{
     background-color: #121212;
     border-radius: 9999px;
     border: 1px solid #7c7c7c;
-    font-family: 'SpotifyMixUIRegular';
+    font-family: 'SpotifyMixUIBold';
     font-size: 0.8125rem;
     font-weight: 700;
     padding: 6px 14px 4px 16px;
@@ -475,7 +479,15 @@ body{
         letter-spacing: normal;
         box-sizing: border-box;
     }
+
     /* _____Content_____ */
+
+    .main-wrap1{
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        box-sizing: border-box;
+    }
     .main-wrap{
         width: 100%;
         display: block;
@@ -483,8 +495,10 @@ body{
         box-sizing: border-box;
     }
     .main-wrap-content{
-        display: flex;
-        flex-flow: row;
+        height: 715px;
+        display: grid;
+        grid-auto-flow: column;
+        /* grid-template-columns: 27.778% 68%; */
         gap: 8px;
         padding: 8px;
         box-sizing: border-box;
@@ -492,18 +506,31 @@ body{
     }
     .left-sidebar-container{
         width: 280px;
-        /* width: 27%; */
+        /* width: 100%; */
+        /* max-width: calc(280*1px); */
         background-color: #121212;
     }
     .main-content-container{
-        width: 70%;
+        width: auto;
         display: block;
+        overflow: hidden;
         box-sizing: border-box;
         background-color: #121212;
+    }
+
+    /* ______Left-Sidebar______ */
+
+    .left-sidebar-container{
+        /* height: 699px; */
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
     }
     .library-content{
         display: flex;
         padding: 12px 16px 8px;
+        margin-bottom: 16px;
         align-items: center;
         justify-content: space-between;
     }
@@ -543,6 +570,85 @@ body{
         display: flex;
         flex-flow: column;
         padding: 0px 8px 8px;
+    }
+    .sidebar-content-box{
+        display: flex;
+        gap: 20px;
+        flex-flow: column;
+        margin: 8px 0px;
+        padding: 16px 20px;
+        border-radius: 8px;
+        background-color: #1f1f1f;
+        box-sizing: border-box;
+    }
+    .sidebar-content-head{
+        display: flex;
+        flex-flow: column;
+        gap: 8px;
+    }
+    .sidebar-text{
+        display: block;
+        font-family: 'SpotifyMixUIRegular';
+        font-size: 14px;
+        font-weight: 400;
+    }
+    #sidebar-button span{
+        height: 32px;
+        padding: 4px 16px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    #sidebar-bottom{
+        padding: 0px 24px;
+        margin: 32px 0px;
+    }
+    .bottom-links a span{
+        font-size: 11px;
+    }
+    .language-selection-container{
+        padding-top: 32px;
+    }
+    #sidebar-bottom .spotify25-container p{
+        font-size: 12px;
+        color: #fff;
+    }
+    /* _____Site-Footer_____ */
+
+    .main-site-footer{
+        bottom: 0px;
+        width: 100%;
+        display: block;
+        position: fixed;
+        background-color: #000;
+    }
+    .site-footer-container{
+        display: block;
+        padding: 0px 8px 8px;
+        box-sizing: border-box;
+    }
+    .site-footer{
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        padding: 11px 24px 7px 15px;
+        justify-content: space-between;
+        box-sizing: border-box;
+        background-image: linear-gradient(90deg, #af2896, #509bf5);
+    }
+    .site-footer-head{
+        font-size: 14px;
+        margin-top: 1px;
+    }
+    .site-footer-text{
+        font-family: 'SpotifyMixUIRegular';
+    }
+
+    /* Content */
+    .main-content-container{
+        display: block;
+        overflow: hidden;
+        overflow-y: scroll;
+        scrollbar-width: none;
     }
 
 
