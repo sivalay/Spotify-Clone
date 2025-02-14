@@ -128,6 +128,9 @@ body{
     display: block;
     padding-left: 16px;
 }
+.content-block-showall{
+    display: none;
+}
 .content-block-head{
     display: block;
     font-family: 'SpotifyMixUI3Title';
@@ -157,11 +160,39 @@ body{
     scroll-snap-align: center;
     /* z-index: 0; */
 }
+.suggession-bbox{
+    display: flex;
+    flex-flow: column;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 20px 12px 22px;
+    padding: 10px 12px 32px 22px;
+    box-sizing: border-box;
+}
+.suggession-containerr{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    gap: 10px;
+    flex-flow: column;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
+    margin: 10px 20px 13px 23px;
+}
 #suggession-box1{
     padding-left: 0px;
 }
 #suggession-box2{
     padding-right: 16px;
+}
+.box-text{
+    display: none;
 }
 .box-image{
     display: block;
@@ -169,6 +200,7 @@ body{
 }
 .box-image img{
     width: 152px;
+    /* min-width: 152px; */
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 4px;
@@ -193,7 +225,6 @@ body{
 
 .footer-content-container{
     display: block;
-    /* color: #121212; */
     position: relative;
     padding: 8px 16px 40px;
 }
@@ -206,6 +237,9 @@ body{
     display: flex;
     flex-flow: column wrap;
     justify-content: left;
+}
+#lap-footer-links{
+    display: none;
 }
 .footer-links{
     display: flex;
@@ -319,7 +353,9 @@ body{
     fill: #fff;
     margin: 1px 0px 0px -4px;
 }
-
+.main-site-footer{
+    display: none;
+}
 
 
 
@@ -366,12 +402,16 @@ body{
         display: none;
     }
     .laptop-left-container{
+        width: 100%;
         display: block;
     }
     .home-input-container{
         width: 100%;
         min-width: auto;
         display: flex;
+    }
+    .search-input-container{
+        display: none;
     }
     .home-button{
         width: 48px;
@@ -457,8 +497,6 @@ body{
         font-weight: 700;
         padding: 4px 16px 4px 8px;
     }
-    /* .signup-button span{
-    } */
     .login-button{
         background-color: #fff;
         border: none;
@@ -507,16 +545,125 @@ body{
     .left-sidebar-container{
         width: 280px;
         /* width: 100%; */
-        /* max-width: calc(280*1px); */
         background-color: #121212;
     }
     .main-content-container{
         width: auto;
         display: block;
         overflow: hidden;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        padding-bottom: 32px;
         box-sizing: border-box;
         background-color: #121212;
     }
+    .suggession-container{
+        display: grid;
+        grid-auto-flow: column;
+    }
+    .content-block-container{
+        padding: 0 18.2642px;
+        display: flex;
+        flex-flow: column;
+        gap: 15px;
+    }
+    .content-head-block{
+        display: flex;
+        justify-content: space-between;
+    }
+    .content-block-head{
+        padding-top: 23px;
+    }
+    .content-block-showall{
+        display: block;
+        padding-top: 29px;
+        margin: 2px 8px 0 0;
+    }
+    .content-block-showall span{
+        color: #B3B3B3;
+        font-size: 14px;
+    }
+    .content-block-head h2{
+        margin-bottom: 8px;
+        font-size: 24px;
+    }
+    /* .suggession-container{
+        --min-colomn-width:152.88px
+    } */
+    .suggession-box{
+        gap: 9px;
+        padding: 12px;
+    }
+    .box-des{
+        display: flex;
+        flex-flow: column;
+        row-gap: 4px;
+        flex-basis: 100%;
+        align-items: flex-start;
+    }
+    .box-image img{
+        width: 100%;
+        /* --min-colomn-width:200px */
+        /* min-width: 152.88px; */
+        min-inline-size: 152.88px;
+        /* min-block-size: 152.88px; */
+        /* border-radius: 50%; */
+    }
+    #popular-artist-block .box-image img{
+        border-radius: 50%;
+    }
+    .box-text{
+        width: 140.88px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        color: #B3B3B3;
+        font-family: 'SpotifyMixUIRegular';
+        font-size: 0.875rem;
+    }
+    #popular-radio-block{
+        margin-top: 5px;
+    }
+    #popular-radio-block .box-head{
+        display: none;
+    }
+    #featured-charts-block .box-head{
+        display: none;
+    }
+    #indais-best-block .box-head{
+        display: none;
+    }
+    /* _____Footer_____ */
+
+    .footer-content-container{
+        padding: 48px 16px 40px 32px;
+    }
+    .footer-content{
+        display: flex;
+    }
+    .footer-site-links{
+        width: 100%;
+        flex: 1 1 50%;
+        /* display: grid; */
+    }
+    .footer-site-links .footer-links{
+        width: 20%;
+    }
+    #lap-footer-links{
+        display: flex;
+    }
+    .divider{
+        margin-bottom: 24px;
+    }
+    #content-bottom .footer-bottom-content{
+        display: none;
+    }
+    #content-bottom .language-selection-container{
+        display: none;
+    }
+
+
 
     /* ______Left-Sidebar______ */
 
@@ -602,15 +749,29 @@ body{
         padding: 0px 24px;
         margin: 32px 0px;
     }
+    .bottom-links a{
+        margin-bottom: 7px;
+    }
     .bottom-links a span{
         font-size: 11px;
     }
     .language-selection-container{
         padding-top: 32px;
     }
+    #sidebar-bottom .spotify25-container{
+        height: 22px;
+    }
     #sidebar-bottom .spotify25-container p{
         font-size: 12px;
         color: #fff;
+        padding-top: 4px;
+    }
+    #sidebar-bottom .language-cont{
+        padding: 6px 17px 4px 16px;
+    }
+    #sidebar-bottom .language-cont .text{
+        font-size: 14px;
+        margin-top: -1px;
     }
     /* _____Site-Footer_____ */
 
@@ -641,15 +802,63 @@ body{
     }
     .site-footer-text{
         font-family: 'SpotifyMixUIRegular';
-    }
-
-    /* Content */
-    .main-content-container{
-        display: block;
-        overflow: hidden;
-        overflow-y: scroll;
-        scrollbar-width: none;
-    }
-
-
+    }    
 }
+
+
+@media screen and (min-width:1066px) {
+    .nav-container{
+        justify-content: center;
+    }
+    #search{
+        display: none;
+    }
+    .search-input-container{
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+    }
+    .search-input{
+        height: 48px;
+        display: block;
+        padding: 0px 8px;
+    }
+    .input-container{
+        width: 100%;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        border-radius: 9999px;
+        background-color: #1f1f1f;
+        box-sizing: border-box;
+    }
+    #lap-search{
+        margin: 0;
+    }
+    #lap-search span svg{
+        fill: #B3B3B3;
+    }
+    .input-outer-container{
+        /* width: 100%; */
+        display: flex;
+        flex-grow: 1;
+    }
+    .input-inner-container{
+        /* width: 100%; */
+        height: fit-content;
+    }
+    .input-inner-container span{
+        /* min-width: 216.92px;
+        display: flex;
+        flex-grow: 1; */
+        color: #B3B3B3;
+        font-family: 'SpotifyMixUIRegular';
+        font-weight: 400;
+        /* font-size: 12px; */
+    }
+    #lap-l-divider{
+        margin: 0;
+        background-color: #B3B3B3;
+    }
+}
+
