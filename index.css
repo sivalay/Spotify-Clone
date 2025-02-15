@@ -160,31 +160,6 @@ body{
     scroll-snap-align: center;
     /* z-index: 0; */
 }
-.suggession-bbox{
-    display: flex;
-    flex-flow: column;
-    flex-direction: column-reverse;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 10px 20px 12px 22px;
-    padding: 10px 12px 32px 22px;
-    box-sizing: border-box;
-}
-.suggession-containerr{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    position: relative;
-    gap: 10px;
-    flex-flow: column;
-    flex-direction: column-reverse;
-    flex-wrap: nowrap;
-    text-wrap: nowrap;
-    margin: 10px 20px 13px 23px;
-}
 #suggession-box1{
     padding-left: 0px;
 }
@@ -196,7 +171,7 @@ body{
 }
 .box-image{
     display: block;
-    height: 152px !important;
+    min-height: 152px !important;
 }
 .box-image img{
     width: 152px;
@@ -533,19 +508,22 @@ body{
         box-sizing: border-box;
     }
     .main-wrap-content{
-        height: 715px;
+        /* height: 715px; */
+        height: 84.59vh;
         display: grid;
         grid-auto-flow: column;
-        /* grid-template-columns: 27.778% 68%; */
+        grid-template-columns: 27.778% 71.43%;
         gap: 8px;
         padding: 8px;
         box-sizing: border-box;
         background-color: #000;
     }
+
     .left-sidebar-container{
-        width: 280px;
-        /* width: 100%; */
+        /* width: 280px; */
+        border-radius: 8px;
         background-color: #121212;
+        box-sizing: border-box;
     }
     .main-content-container{
         width: auto;
@@ -554,6 +532,7 @@ body{
         overflow-y: scroll;
         scrollbar-width: none;
         padding-bottom: 32px;
+        border-radius: 8px;
         box-sizing: border-box;
         background-color: #121212;
     }
@@ -565,7 +544,7 @@ body{
         padding: 0 18.2642px;
         display: flex;
         flex-flow: column;
-        gap: 15px;
+        gap: 20px;
     }
     .content-head-block{
         display: flex;
@@ -587,9 +566,6 @@ body{
         margin-bottom: 8px;
         font-size: 24px;
     }
-    /* .suggession-container{
-        --min-colomn-width:152.88px
-    } */
     .suggession-box{
         gap: 9px;
         padding: 12px;
@@ -603,14 +579,14 @@ body{
     }
     .box-image img{
         width: 100%;
-        /* --min-colomn-width:200px */
         /* min-width: 152.88px; */
         min-inline-size: 152.88px;
-        /* min-block-size: 152.88px; */
-        /* border-radius: 50%; */
     }
     #popular-artist-block .box-image img{
         border-radius: 50%;
+    }
+    #l-box-text{
+        display: none;
     }
     .box-text{
         width: 140.88px;
@@ -622,9 +598,9 @@ body{
         font-family: 'SpotifyMixUIRegular';
         font-size: 0.875rem;
     }
-    #popular-radio-block{
+    /* #popular-radio-block{
         margin-top: 5px;
-    }
+    } */
     #popular-radio-block .box-head{
         display: none;
     }
@@ -645,7 +621,6 @@ body{
     .footer-site-links{
         width: 100%;
         flex: 1 1 50%;
-        /* display: grid; */
     }
     .footer-site-links .footer-links{
         width: 20%;
@@ -673,6 +648,10 @@ body{
         flex-flow: column;
         align-items: center;
         justify-content: space-between;
+    }
+    .left-sidebar{
+        width: 100%;
+        display: block;
     }
     .library-content{
         display: flex;
@@ -814,17 +793,20 @@ body{
         display: none;
     }
     .search-input-container{
-        width: 100%;
+        /* width: 100%; */
+        max-width: 490px;
+        flex: 1;
         display: block;
         box-sizing: border-box;
     }
     .search-input{
+        /* width: auto; */
         height: 48px;
         display: block;
         padding: 0px 8px;
     }
     .input-container{
-        width: 100%;
+        /* width: 100%; */
         height: 48px;
         display: flex;
         align-items: center;
@@ -838,27 +820,119 @@ body{
     #lap-search span svg{
         fill: #B3B3B3;
     }
-    .input-outer-container{
-        /* width: 100%; */
-        display: flex;
-        flex-grow: 1;
-    }
-    .input-inner-container{
-        /* width: 100%; */
-        height: fit-content;
-    }
-    .input-inner-container span{
-        /* min-width: 216.92px;
-        display: flex;
-        flex-grow: 1; */
+    .input-text{
+        display: block;
         color: #B3B3B3;
+        flex-grow: 1;
         font-family: 'SpotifyMixUIRegular';
         font-weight: 400;
-        /* font-size: 12px; */
     }
     #lap-l-divider{
-        margin: 0;
+        margin: 0 0 0 1px;
         background-color: #B3B3B3;
     }
+    #lap-search1{
+        margin: 0 4px 0 0;
+    }
+    #lap-search1 span svg{
+        fill: #B3B3B3;
+    }
+    /* Content */
+    /* .main-wrap-content{
+        grid-template-columns: 27.778% 71.43%;
+    }
+    .left-sidebar-container{
+        width: 100%;
+    } */
 }
+
+@media screen and (min-width:1440px) {
+    .main-wrap-content{
+        grid-template-columns: 420px 1fr;
+    }
+    .content-block-container{
+        padding: 0 23.4717px;
+    }
+    .box-image{
+        width: fit-content;
+        min-height: 138.17px !important;
+    }
+    .box-image img{
+        /* width: 138.17px; */
+        min-inline-size: 138.17px !important;
+    }
+    .box-head{
+        width: 138.18px;
+    }
+    .box-head a span{
+        width: 138.18px;
+    }
+    .box-text{
+        width: fit-content;
+    }
+    .suggession-box{
+        gap: 8px;
+    }
+    #popular-radio-block .box-image{
+        min-inline-size: 138.18px;
+    }
+    #featured-charts-block .box-image{
+        min-inline-size: 138.18px;
+    }
+    #indais-best-block .box-image{
+        min-inline-size: 138.18px;
+    } 
+    /* #l-box-text{
+        display: -webkit-box;
+    } */
+}
+/* @media screen and (min-width:1670px) {
+    .content-block-container{
+        padding: 0 24px;
+    }
+    .suggession-box{
+        display: none;
+    }
+    #suggession-box1, #suggession-box3{
+        display: flex;
+        min-width: 216.39px;
+        flex-wrap: nowrap;
+        flex-grow: 1;
+    }
+    .box-image{
+        min-height: 216.39px !important;
+    }
+    .box-image img{
+        min-inline-size: 216.39px !important;
+    }
+} */
+@media screen and (min-width:1717px) {
+    .home-input-container{
+        justify-content: right;
+    }
+    .content-block-container{
+        padding: 0 24px;
+    }
+    .suggession-box{
+        display: none;
+    }
+    #suggession-box1, #suggession-box3{
+        display: flex;
+        min-width: 225.8px;
+        flex-wrap: nowrap;
+    }
+    .box-image{
+        min-height: 225.8px !important;
+    }
+    .box-image img{
+        min-inline-size: 225.8px !important;
+    }
+}
+@media screen and (min-width:1728px) {
+    #suggession-box4{
+        display: flex;
+    }
+}
+
+
 
