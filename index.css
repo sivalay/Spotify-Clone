@@ -51,6 +51,9 @@ body{
 .laptop-right-container{
     display: none;
 }
+.nav-lap-container{
+    display: none;
+}
 .nav-left-container{
     width: 100%;
     display: block;
@@ -171,11 +174,10 @@ body{
 }
 .box-image{
     display: block;
-    min-height: 152px !important;
+    height: 152px !important;
 }
 .box-image img{
     width: 152px;
-    /* min-width: 152px; */
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 4px;
@@ -335,6 +337,9 @@ body{
 
 
 @media screen and (min-width:370px) {
+    .nav-lap-container{
+        display: flex;
+    }
     #mob-l-logo{
         display: block;
     }
@@ -519,6 +524,13 @@ body{
         background-color: #000;
     }
 
+    /* .suggession-box{
+        display: none;
+    }
+    #suggession-box1, #suggession-box3{
+        display: flex;
+        flex-wrap: nowrap;
+    } */
     .left-sidebar-container{
         /* width: 280px; */
         border-radius: 8px;
@@ -574,7 +586,7 @@ body{
         display: flex;
         flex-flow: column;
         row-gap: 4px;
-        flex-basis: 100%;
+        /* flex-basis: 100%; */
         align-items: flex-start;
     }
     .box-image img{
@@ -597,6 +609,9 @@ body{
         color: #B3B3B3;
         font-family: 'SpotifyMixUIRegular';
         font-size: 0.875rem;
+    }
+    .popular-albums-block{
+        margin-top: -5px;
     }
     /* #popular-radio-block{
         margin-top: 5px;
@@ -837,13 +852,6 @@ body{
     #lap-search1 span svg{
         fill: #B3B3B3;
     }
-    /* Content */
-    /* .main-wrap-content{
-        grid-template-columns: 27.778% 71.43%;
-    }
-    .left-sidebar-container{
-        width: 100%;
-    } */
 }
 
 @media screen and (min-width:1440px) {
@@ -855,7 +863,7 @@ body{
     }
     .box-image{
         width: fit-content;
-        min-height: 138.17px !important;
+        height: 138.17px !important;
     }
     .box-image img{
         /* width: 138.17px; */
@@ -872,6 +880,15 @@ body{
     }
     .suggession-box{
         gap: 8px;
+    }
+    #popular-radio-block .suggession-box{
+        gap: 13px;
+    }
+    #featured-charts-block .suggession-box{
+        gap: 11px;
+    }
+    #indais-best-block .suggession-box{
+        gap: 12px;
     }
     #popular-radio-block .box-image{
         min-inline-size: 138.18px;
@@ -929,8 +946,48 @@ body{
     }
 }
 @media screen and (min-width:1728px) {
-    #suggession-box4{
+    #suggession-box1, #suggession-box3, #suggession-box4{
         display: flex;
+        min-width: 186px;
+    }
+    .box-image{
+        min-height: 186px !important;
+    }
+    .box-image img{
+        min-inline-size: 186px !important;
+    }
+}
+@media screen and (min-width:1810px) {
+    .search-input-container{
+        margin-right: 47px;
+    }
+    #suggession-box1, #suggession-box3, #suggession-box4{
+        display: flex;
+        min-width: 199.66px;
+    }
+    .box-image{
+        min-height: 199.66px !important;
+    }
+    .box-image img{
+        min-inline-size: 199.66px !important;
+    }
+}
+@media screen and (min-width:1815px) {
+    .main-wrap-content{
+        height: 85.99vh;
+    }
+    .search-input-container{
+        margin-right: 67px;
+    }
+    #suggession-box1, #suggession-box3, #suggession-box4{
+        display: flex;
+        min-width: 205.66px;
+    }
+    .box-image{
+        min-height: 205.66px !important;
+    }
+    .box-image img{
+        min-inline-size: 205.66px !important;
     }
 }
 
